@@ -4,4 +4,10 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - run: echo hello world
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v1
+      - uses: BSFishy/pip-action@v1
+        with:
+          packages: |
+            nbconvert
+      - run: nbconvert --version

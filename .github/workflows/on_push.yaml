@@ -6,10 +6,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: pip install nbconvert ipykernel pint matplotlib scipy open-atmos-jupyter-utils
-      - run: sudo apt-get install inkscape
-      - uses: tecolicom/actions-use-apt-tools@v1
-        with:
-          tools: pandoc texlive-xetex texlive-fonts-recommended texlive-plain-generic
+      - run: sudo apt-get install inkscape texlive-xetex texlive-fonts-recommended texlive-plain-generic     
+        #- uses: tecolicom/actions-use-apt-tools@v1
+        #with:
+          #tools: pandoc texlive-xetex texlive-fonts-recommended texlive-plain-generic
       - run: jupyter nbconvert --to pdf --execute lab1.ipynb
       - uses: actions/upload-artifact@v4
         with:

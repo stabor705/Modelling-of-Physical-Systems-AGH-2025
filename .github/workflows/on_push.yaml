@@ -12,3 +12,7 @@ jobs:
           packages: pandoc texlive-xetex texlive-fonts-recommended texlive-plain-generic inkscape
           version: 1.0
       - run: jupyter nbconvert --to pdf lab1.ipynb
+      - uses: actions/upload-artifact@v4
+        with:
+          name: lab1
+          path: lab1.pdf

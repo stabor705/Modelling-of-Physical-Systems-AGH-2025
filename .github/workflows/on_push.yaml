@@ -1,15 +1,15 @@
 name: lab01
 on: push
 jobs:
-  test:
+  generate-pdf:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - run: pip install nbconvert
-      #- run: sudo apt-get install pandoc texlive-xetex texlive-fonts-recommended texlive-plain-generic inkscape
+      - run: sudo apt-get install inkscape
       - uses: tecolicom/actions-use-apt-tools@v1
         with:
-          tools: pandoc texlive-xetex texlive-fonts-recommended texlive-plain-generic inkscape
+          tools: pandoc texlive-xetex texlive-fonts-recommended texlive-plain-generic
       - run: jupyter nbconvert --to pdf **.ipynb
       - uses: actions/upload-artifact@v4
         with:

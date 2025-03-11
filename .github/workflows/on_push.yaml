@@ -6,5 +6,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: pip install nbconvert
-      - run: sudo apt-get install pandoc texlive-xetex texlive-fonts-recommended texlive-plain-generic inkscape
+      #- run: sudo apt-get install pandoc texlive-xetex texlive-fonts-recommended texlive-plain-generic inkscape
+      - uses: awalsh128/cache-apt-pkgs-action@latest
+        with:
+          packages: pandoc texlive-xetex texlive-fonts-recommended texlive-plain-generic inkscape
+          version: 1.0
       - run: jupyter nbconvert --to pdf lab1.ipynb

@@ -6,4 +6,4 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: pip install nbconvert
-      - run: jupyter nbconvert --to html lab1.ipynb
+      - run: jupyter nbconvert --to pdf lab1.ipynb

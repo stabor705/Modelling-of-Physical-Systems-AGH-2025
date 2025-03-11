@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: pip install nbconvert
+      - run: pip install nbconvert ipykernel pint matplotlib scipy open-atmos-jupyter-utils
       - run: sudo apt-get install inkscape
       - uses: tecolicom/actions-use-apt-tools@v1
         with:

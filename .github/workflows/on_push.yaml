@@ -10,8 +10,8 @@ jobs:
         #- uses: tecolicom/actions-use-apt-tools@v1
         #with:
           #tools: pandoc texlive-xetex texlive-fonts-recommended texlive-plain-generic
-      - run: jupyter nbconvert --to pdf --execute lab1.ipynb
+      - run: jupyter nbconvert --to pdf --execute lab2/lab2.ipynb
       - uses: actions/upload-artifact@v4
         with:
-          name: lab1
-          path: lab1.pdf
+          name: lab2
+          path: lab2.pdf

@@ -14,4 +14,4 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: results
-          path: lab2/lab2.pdf
+          path: lab*/lab*.pdf

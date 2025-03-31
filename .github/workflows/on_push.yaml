@@ -6,7 +6,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: pip install nbconvert ipykernel pint matplotlib scipy open-atmos-jupyter-utils
-      - run: usod apt-get update
+      - run: sudo apt-get update
       - run: sudo apt-get install inkscape texlive-xetex texlive-fonts-recommended texlive-plain-generic pandoc
         #- uses: tecolicom/actions-use-apt-tools@v1
         #with:
